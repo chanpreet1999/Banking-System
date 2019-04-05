@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>cLogin</servlet-name>
+        <servlet-class>customer.cLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>cLogout</servlet-name>
+        <servlet-class>customer.cLogout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>cDelete</servlet-name>
+        <servlet-class>customer.cDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cLogin</servlet-name>
+        <url-pattern>/cLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cLogout</servlet-name>
+        <url-pattern>/cLogout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cDelete</servlet-name>
+        <url-pattern>/cDelete</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

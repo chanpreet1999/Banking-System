@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome new customer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <center>
+        <h4>
+            Please provide the following details
+        </h4>
+        <br>
+        <form action="customerSignup2.jsp">
+            <table>
+
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" required="" placeholder="Name"></td>
+                </tr>
+
+                <tr>
+                    <td>DOB</td>
+                    <td><input type="date" name="dob" required=""></td>
+                </tr>
+
+                <tr>
+                    <td>Sex</td>
+                    <td>
+                        Male<input type="radio" name="sex" value="Male">
+                        <br>
+                        Female<input type="radio" name="sex" value="Female">
+                        <br>
+                        Others<input type="radio" name="sex" value="Others">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" name="address" placeholder="Address"></td>
+                </tr>
+
+                <tr>
+                    <td>Phone no</td>
+                    <td><input type="text" name="phno" placeholder="Phone No"></td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" required placeholder="Password"></td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" placeholder="Email-id"></td>
+                </tr>
+                <tr>
+                    <td>Nationality</td>
+                    <td>
+                        <select name="country">
+                            <option>Indian</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Type of account</td>
+                    <td><select name="type">
+                            <option>savings</option>
+                            <option>current</option>
+                        </select></td>
+                </tr>
+
+
+                <tr>
+                    <td>Initial amount to be deposited</td>
+                    <td><input type="text" name="balance" placeholder="Amount"></td>
+                </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td><input type="Submit" value="Create account"></td>
+                </tr>
+
+            </table>
+        </form>
+    </center>
+</body>
+</html>
