@@ -6,6 +6,9 @@
 package customer;
 
 import java.sql.*;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -103,8 +106,8 @@ public class CustomerDao {
 
         return status;
     }
-    
-public static int edit(ModelCustomer c) {
+
+    public static int edit(ModelCustomer c) {
         Connection con = null;
         int i = 0;
         String query = "update customer set name=? ,password=? ,email=? ,country=? ,sex=? ,address=? ,dob=? ,type=? ,balance=? ,phno=? where id=?";
@@ -130,5 +133,33 @@ public static int edit(ModelCustomer c) {
             System.out.println("=====Exception in save customer=====" + ex);
         }
         return i;
+    }
+
+    public static List<ModelCustomer> getAllRecords() {
+        List<ModelCustomer> list = new ArrayList<>();
+        Connection con = null;
+        try {
+            con = CustomerDao.getConnection();
+            PreparedStatement ps = con.prepareCall("select * from customer");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                ModelCustomer c = new ModelCustomer();
+                c.setId(rs.getInt("id"));
+                c.setName(rs.getString("name"));
+                c.setPassword(rs.getString("password"));
+                c.setEmail(rs.getString("email"));
+                c.setCountry(rs.getString("country"));
+                c.setSex(rs.getString("sex"));
+                c.setAddress(rs.getString("address"));
+                c.setDob(rs.getString("dob"));
+                c.setType(rs.getString("type"));
+                c.setBalance(rs.getInt("balance"));
+                c.setPhno(rs.getLong("phno"));
+                list.add(c);
+            }
+        } catch (Exception ex) {
+            System.out.println("=====Exception in get all customer records=====");
+        }
+        return list;
     }
 }
