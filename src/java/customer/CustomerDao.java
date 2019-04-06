@@ -140,7 +140,7 @@ public class CustomerDao {
         Connection con = null;
         try {
             con = CustomerDao.getConnection();
-            PreparedStatement ps = con.prepareCall("select * from customer");
+            PreparedStatement ps = con.prepareStatement("select * from customer");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 ModelCustomer c = new ModelCustomer();

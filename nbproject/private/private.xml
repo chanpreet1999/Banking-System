@@ -4,11 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/Chan/Advance%20java/banking%20system/web/cEdit.jsp</file>
-            <file>file:/E:/Chan/Advance%20java/banking%20system/web/employeeLogin.html</file>
-            <file>file:/E:/Chan/Advance%20java/banking%20system/src/java/employee/aLogin.java</file>
+            <file>file:/E:/Chan/Advance%20java/banking%20system/web/cRec.jsp</file>
             <file>file:/E:/Chan/Advance%20java/banking%20system/src/java/customer/cLogin.java</file>
             <file>file:/E:/Chan/Advance%20java/banking%20system/web/adminHome.jsp</file>
             <file>file:/E:/Chan/Advance%20java/banking%20system/web/customerLogin.html</file>
+            <file>file:/E:/Chan/Advance%20java/banking%20system/src/java/admin/aLogin.java</file>
+            <file>file:/E:/Chan/Advance%20java/banking%20system/src/java/customer/ModelCustomer.java</file>
+            <file>file:/E:/Chan/Advance%20java/banking%20system/web/cWithdraw.jsp</file>
             <file>file:/E:/Chan/Advance%20java/banking%20system/web/index.html</file>
             <file>file:/E:/Chan/Advance%20java/banking%20system/src/java/customer/CustomerDao.java</file>
             <file>file:/E:/Chan/Advance%20java/banking%20system/web/adminLogin.html</file>
