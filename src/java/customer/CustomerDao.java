@@ -7,13 +7,11 @@ package customer;
 
 import java.sql.*;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author Chanpreet
  */
+
 public class CustomerDao {
 
     public static Connection getConnection() throws Exception {
@@ -161,5 +159,36 @@ public class CustomerDao {
             System.out.println("=====Exception in get all customer records=====");
         }
         return list;
+    }
+    
+    public static ModelCustomer getRecordById(int id)
+    {
+        ModelCustomer c=new ModelCustomer();
+        try {
+            Connection con=CustomerDao.getConnection();
+            PreparedStatement ps=con.prepareStatement("select * from customer where id=?");
+            ps.setInt(1, id);
+            ResultSet rs=ps.executeQuery();
+            while(rs.next())
+            {
+                c.setId(rs.getInt("id"));
+                c.setName(rs.getString("name"));
+                c.setPassword(rs.getString("password"));
+                c.setEmail(rs.getString("email"));
+                c.setCountry(rs.getString("country"));
+                c.setSex(rs.getString("sex"));
+                c.setAddress(rs.getString("address"));
+                c.setDob(rs.getString("dob"));
+                c.setType(rs.getString("type"));
+                c.setBalance((int) rs.getLong("balance"));
+                c.setPhno((int)rs.getLong("phno"));
+                System.out.println("========="+c.getCountry()+"=========");
+            }
+        } catch (Exception ex) {
+            System.out.println("====Error in get customer record by id====");
+            System.out.println("Exception is:"+ex);
+        }
+        System.out.println("========="+c.getName()+"=========");
+        return c;
     }
 }

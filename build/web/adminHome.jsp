@@ -12,7 +12,9 @@
         <title>Admin Home Page</title>
     </head>
     <body>
-        <a href="cRec.jsp">view all customer records</a>   
-        <a href="empRec,jsp">view all employee records></a>
+        <a href="cRec.jsp">view all customer records</a>  
+        
+        <a href="eSignup.html">Add a new employee</a>
+        <a href="empRec.jsp">view all employee records></a>
     </body>
 </html>
