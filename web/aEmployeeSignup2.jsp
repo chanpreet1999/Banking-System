@@ -4,8 +4,10 @@
     Author     : Chanpreet
 --%>
 
+<%@page import="employee.EmployeeDao" %>
 <%@page import="employee.ModelEmployee"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page  errorPage="error.jsp"%> 
 <jsp:useBean class="ModelEmployee" id="e" ></jsp:useBean>
 <jsp:setProperty name="e" property="*"></jsp:setProperty>
 <!DOCTYPE html>
@@ -16,7 +18,17 @@
     </head>
     <body>
         <%
-            int i=
+            int i=EmployeeDao.save(e);
+            if(i>0)
+                response.sendRedirect("eSuccess.jsp");
+            else
+            {
+                
+            out.println("An error occured while updatng database Please check the logs ");
+        %>
+        <jsp:include page="aEmployeeSignup.html"></jsp:include>
+        <%
+            }
         %>
     </body>
 </html>

@@ -27,7 +27,17 @@ public class EmployeeDao {
     public static int save(ModelEmployee e)
     {
         int status=0;
-        String query="insert into employee(name,password,email,sex,address,dob,phno,grade,salary,bonus) values(?,?,?,?,?,?,?,?,?,?)";
+        if(e.getGrade().equals("A"))
+                e.setSalary(100000);
+        else if(e.getGrade().equals("B"))
+                e.setSalary(70000);
+        else if(e.getGrade().equals("C"))
+                e.setSalary(40000);
+        else if(e.getGrade().equals("D"))
+                e.setSalary(25000);
+        else
+                e.setSalary(15000);
+        String query="insert into employee(name,password,email,sex,address,dob,phno,grade,salary,bonus,bond_length) values(?,?,?,?,?,?,?,?,?,?,?)";
         Connection con=EmployeeDao.getConnection();
         try {
             PreparedStatement ps=con.prepareStatement(query);
@@ -42,6 +52,7 @@ public class EmployeeDao {
             ps.setString(8, e.getGrade());
             ps.setLong(9, e.getSalary());
             ps.setLong(10, e.getBonus());
+            ps.setFloat(11, e.getBond_length());
             
             status=ps.executeUpdate();
         

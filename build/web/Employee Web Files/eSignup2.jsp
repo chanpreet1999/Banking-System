@@ -6,6 +6,7 @@
 
 <%@page import="employee.ModelEmployee"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page  errorPage="error.jsp"%> 
 <jsp:useBean class="ModelEmployee" id="e" ></jsp:useBean>
 <jsp:setProperty name="e" property="*"></jsp:setProperty>
 <!DOCTYPE html>

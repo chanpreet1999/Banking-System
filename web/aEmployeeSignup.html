@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Add New Employee</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <center>
+        <h2>ADD A NEW EMPLOYEE</h2><br>
+        <form action="aEmployeeSignup2.jsp">
+            <table>
+
+                <tr>
+                    <td>Name:</td>
+
+                    <td><input type="text" name="name" placeholder="Employee Name"></td>
+                </tr>
+
+                <tr>
+                    <td>DOB</td>
+
+                    <td><input type="date" name="dob"></td>
+                </tr>
+
+                <tr>
+                    <td>Sex</td>
+                    <td>
+                        Male <input type="radio" name="sex" value="Male">
+                        <br>
+                        Female <input type="radio" name="sex" value="Female">
+                        <br>
+                        Others <input type="radio" name="sex" value="Others">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" name="address" placeholder="Residential Address"></td>
+                </tr>
+
+                <tr>
+                    <td>Phno</td>
+                    <td><input type="text" name="phno" placeholder="Contact No"></td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" placeholder="Password" required=""></td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" placeholder="Email Id"></td>
+                </tr>
+
+                <tr>
+                    <td>Grade</td>
+                    <td>
+                        <select name="grade">
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+
+                    <td><input type="submit" value="Add Employee"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

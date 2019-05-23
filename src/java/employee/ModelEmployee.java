@@ -12,8 +12,17 @@ package employee;
 public class ModelEmployee 
 {
     int id;
+    float bond_length;
     long phno,salary,bonus;
     String name,password,email,sex,address,dob,grade;
+
+    public float getBond_length() {
+        return bond_length;
+    }
+
+    public void setBond_length(float bond_length) {
+        this.bond_length = bond_length;
+    }
 
     public int getId() {
         return id;
