@@ -11,11 +11,20 @@ package employee;
  */
 public class ModelEmployee 
 {
-    int id;
+    int id,no_of_customers;
     float bond_length;
     long phno,salary,bonus;
     String name,password,email,sex,address,dob,grade;
 
+    public int getNo_of_customers() {
+        return no_of_customers;
+    }
+
+    public void setNo_of_customers(int no_of_customers) {
+        this.no_of_customers = no_of_customers;
+    }
+
+    
     public float getBond_length() {
         return bond_length;
     }

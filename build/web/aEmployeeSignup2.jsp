@@ -5,10 +5,10 @@
 --%>
 
 <%@page import="employee.EmployeeDao" %>
-<%@page import="employee.ModelEmployee"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page  errorPage="error.jsp"%> 
-<jsp:useBean class="ModelEmployee" id="e" ></jsp:useBean>
+<jsp:useBean class="employee.ModelEmployee" id="e" ></jsp:useBean>
 <jsp:setProperty name="e" property="*"></jsp:setProperty>
 <!DOCTYPE html>
 <html>
