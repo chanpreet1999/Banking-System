@@ -9,9 +9,29 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Employee Home Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%
+            response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
+            response.setHeader("Pragma", "no-cache");
+
+            request.getSession(false);
+
+            if (session.getAttribute("name") != null) 
+            {
+                String name = (String) session.getAttribute("name");
+                out.println("<h3>Welome Mr." + name + "</h3>");
+            } 
+            else 
+            {
+                response.sendRedirect("employeeLogin.html");
+            }
+        %>
+        <h5>
+            Here are all the customer records:
+        </h5>
+        <jsp:include page="cRec.jsp"></jsp:include>
+        
     </body>
 </html>
