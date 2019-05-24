@@ -53,7 +53,7 @@ public class eLogin extends HttpServlet {
             
             session.setMaxInactiveInterval(30*60); //session expires automatically after 30 mins
             out.println("loggged in");
-            //response.sendRedirect("eHome.jsp");
+            response.sendRedirect("eHome.jsp");
         }
         
         else

@@ -69,7 +69,7 @@ public class EmployeeDao {
     public static ModelEmployee login(String uname, String pass) {
         
         String query="select * from employee where name=? and password=?";
-        ModelEmployee e=null;
+        ModelEmployee e=new ModelEmployee();
         try {
             Connection con=EmployeeDao.getConnection();
             
@@ -98,7 +98,7 @@ public class EmployeeDao {
             
             else
             {
-                System.out.print("====No records found in database");
+                System.out.print("====No records found in database====");
             }
             
         } catch (Exception ex) {
